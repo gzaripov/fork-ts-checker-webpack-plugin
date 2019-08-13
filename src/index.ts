@@ -510,9 +510,7 @@ class ForkTsCheckerWebpackPlugin {
             this.doneCallback();
           } else {
             if (this.compiler) {
-              this.compiler.hooks.forkTsCheckerWaiting.call(
-                this.tslint !== false
-              );
+              this.compiler.hooks.forkTsCheckerWaiting.call(true);
             }
             if (!this.silent && this.logger) {
               this.logger.info(
@@ -537,10 +535,7 @@ class ForkTsCheckerWebpackPlugin {
           this.doneCallback();
         } else {
           if (this.compiler) {
-            this.compiler.applyPlugins(
-              'fork-ts-checker-waiting',
-              this.tslint !== false
-            );
+            this.compiler.applyPlugins('fork-ts-checker-waiting', true);
           }
           if (!this.silent && this.logger) {
             this.logger.info(
@@ -871,6 +866,4 @@ class ForkTsCheckerWebpackPlugin {
 
 export = ForkTsCheckerWebpackPlugin;
 
-namespace ForkTsCheckerWebpackPlugin {
-
-}
+namespace ForkTsCheckerWebpackPlugin {}

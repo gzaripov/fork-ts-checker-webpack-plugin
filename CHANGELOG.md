@@ -1,3 +1,7 @@
+## v0.5.3
+
+* Add tslint to dependencies
+
 ## v0.5.2
 
 * [Fix erroneous error on diagnostics at 0 line; remove deprecated fs.existsSync](https://github.com/Realytics/fork-ts-checker-webpack-plugin/pull/190) (#190)
